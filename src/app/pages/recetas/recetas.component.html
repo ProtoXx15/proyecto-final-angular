@@ -1,0 +1,25 @@
+<h1>Recetas</h1>
+
+@if (recetas.length > 0) {
+  <div>
+    @for (receta of recetas; track receta) {
+      <div>
+        <h2>{{ receta.nombre }}</h2>
+        <p>{{ receta.descripcion }}</p>
+        <h3>Ingredientes:</h3>
+        <ul>
+          @for (ingrediente of receta.ingredientes; track ingrediente) {
+            <li>{{ ingrediente }}</li>
+          }
+        </ul>
+        <h3>Preparación:</h3>
+        <ol>
+          @for (paso of receta.preparacion; track paso) {
+            <li>{{ paso }}</li>
+          }
+        </ol>
+      </div>
+    }
+  </div>
+}
+

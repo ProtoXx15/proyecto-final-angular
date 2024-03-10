@@ -6,6 +6,7 @@ import { CameraComponent } from './pages/camera/camera.component';
 import { CalculadoraComponent } from './pages/calculadora/calculadora.component';
 import { DogsComponent } from './pages/dogs/dogs.component';
 import { AdivinanzaComponent } from './pages/adivinanza/adivinanza.component';
+import { recetasComponent } from './pages/recetas/recetas.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,6 +15,7 @@ export const routes: Routes = [
   { path: 'dogs', component: DogsComponent },
   { path: 'calculadora', component: CalculadoraComponent },
   { path: 'adivinanza', component: AdivinanzaComponent },
+  { path: 'recetas', component: recetasComponent }, 
   { path: 'camera', component: CameraComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
