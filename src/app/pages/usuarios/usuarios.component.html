@@ -1,0 +1,72 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Ocupación</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (usuario of usuarios; track usuario){
+        <tr>
+            <th>{{ usuario.id }}</th>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.apellido }}</td>
+            <td>{{ usuario.edad }}</td>
+            <td>{{ usuario.ciudad }}</td>
+            <td>{{ usuario.ocupacion }}</td>
+            <td>
+                <button type="button" class="btn btn-outline-danger" (click)="borrarUsuario(usuario.id)">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#formUserAdd">
+    Añadir usuario
+</button>
+<div class="modal fade" id="formUserAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Insertar Usuario</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="usuarioForm" (ngSubmit)="insertarUsuario()">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" formControlName="nombre" placeholder="Nombre" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input id="apellido" formControlName="apellido" placeholder="Apellido" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad</label>
+                        <input id="edad" formControlName="edad" placeholder="Edad" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad</label>
+                        <input id="ciudad" formControlName="ciudad" placeholder="Ciudad" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="ocupacion">Ocupación</label>
+                        <input id="ocupacion" formControlName="ocupacion" placeholder="Ocupación" class="form-control">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button> <br>
+                        <button type="button" class="btn btn-secondary ml-5" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>

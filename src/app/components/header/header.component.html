@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink='home'><img src="https://github.com/pablo-sanchez83.png" alt="github profile pic"
+        width="50" height="50"> Pablo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink='home'><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="dogs"><i class="fa-solid fa-paw"></i> Dogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="github"><i class="fa-brands fa-github-alt"></i> GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="clima"><i class="fa-solid fa-cloud"></i> Clima</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="server"><i class="fa-solid fa-server"></i> Servidor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="opcion 1"><i class="fa-solid fa-calculator"></i> Testing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="camera"><i class="fa-solid fa-camera"></i> Camara</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="opcion 2"><i class="fa-solid fa-images"></i> Testing</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <input class="form-control me-2" type="search" list="search" [(ngModel)]="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success" (click)="buscar()"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<datalist id="search">
+  <option value="Cats"></option>
+  <option value="Clima"></option>
+  <option value="GitHub"></option>
+  <option value="Servidor"></option>
+  <option value="Calculadora"></option>
+  <option value="Camara"></option>
+  <option value="Galeria"></option>
+</datalist>

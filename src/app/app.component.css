@@ -1,0 +1,21 @@
+:host {
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.content {
+  display: grid;
+  place-content: center;
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+  width: 100%;
+}
