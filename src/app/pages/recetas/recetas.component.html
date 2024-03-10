@@ -1,25 +1,39 @@
 <h1>Recetas</h1>
 
+<div>
+  <button (click)="nuevaRecetaVisible = true">Agregar Receta</button>
+</div>
+
+<br>
+
 @if (recetas.length > 0) {
   <div>
-    @for (receta of recetas; track receta) {
+    @for (receta of recetas; track receta.id)  {
       <div>
-        <h2>{{ receta.nombre }}</h2>
-        <p>{{ receta.descripcion }}</p>
-        <h3>Ingredientes:</h3>
-        <ul>
-          @for (ingrediente of receta.ingredientes; track ingrediente) {
-            <li>{{ ingrediente }}</li>
-          }
-        </ul>
-        <h3>Preparación:</h3>
-        <ol>
-          @for (paso of receta.preparacion; track paso) {
-            <li>{{ paso }}</li>
-          }
-        </ol>
+        <div class="receta-container">
+          <h2>{{ receta.nombre }}</h2>
+          <p><strong>Descripción:</strong> {{ receta.descripcion }}</p>
+          <p><strong>Lugar de Creación:</strong> {{ receta.lugar_de_creacion }}</p>
+          <p><strong>Precio:</strong> {{ receta.precio }}</p>
+          <button (click)="eliminarReceta(receta.id)">Eliminar Receta</button>
+        </div>
       </div>
     }
   </div>
 }
 
+<!-- Formulario para agregar nueva receta -->
+@if (nuevaRecetaVisible) {
+  <form (submit)="agregarNuevaReceta()" class="nueva-receta-form">
+    <h2>Agregar Nueva Receta</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="nuevaReceta.nombre" required>
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" [(ngModel)]="nuevaReceta.descripcion" required></textarea>
+    <label for="lugar_de_creacion">Lugar de Creación:</label>
+    <input type="text" id="lugar_de_creacion" name="lugar_de_creacion" [(ngModel)]="nuevaReceta.lugar_de_creacion" required>
+    <label for="precio">Precio:</label>
+    <input type="text" id="precio" name="precio" [(ngModel)]="nuevaReceta.precio" required>
+    <button type="submit">Agregar Receta</button>
+  </form>
+}

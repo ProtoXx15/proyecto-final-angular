@@ -1,0 +1,80 @@
+/* Estilos para el contenedor principal de las recetas */
+.receta-container {
+    margin-bottom: 20px; /* Espacio entre recetas */
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: beige;
+  }
+  
+  /* Estilos para el título de la receta */
+  .receta-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para la descripción de la receta */
+  .receta-container p {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilos para la lista de ingredientes */
+  .receta-container ul {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilos para los elementos de la lista de ingredientes */
+  .receta-container ul li {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  /* Estilos para la lista de pasos de preparación */
+  .receta-container ol {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilos para los elementos de la lista de pasos de preparación */
+  .receta-container ol li {
+    list-style-type: decimal;
+    margin-left: 20px;
+  }
+  form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  

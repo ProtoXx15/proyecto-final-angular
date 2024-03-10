@@ -1,0 +1,66 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 25px;
+}
+
+.form-control {
+    flex: 1; /* El input ocupará todo el espacio disponible */
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.btn-primary {
+    font-size: 18px;
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    background-color: #444;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.badge {
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+.badge.bg-success {
+    background-color: #28a745;
+}
+
+.btn-primary {
+    font-size: 18px;
+}

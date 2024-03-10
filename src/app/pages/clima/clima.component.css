@@ -1,32 +1,49 @@
+/* Estilos para el contenedor principal */
 .contenedor {
-      max-width: 500px;
+      max-width: 600px;
       margin: 0 auto;
       padding: 20px;
       text-align: center;
-      background-color: #a0d3ff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-     }
-     
-     h1 {
-      color: #333333;
-     }
-     
-     input[type="text"] {
-      padding: 10px;
-      font-size: 16px;
-      width: 70%;
-     }
-     
-     button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #007bff;
+      background-color: rgba(255, 241, 184, 1);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el título */
+.contenedor h1 {
+      color: #4a4a4a;
+      margin-bottom: 20px;
+}
+
+/* Estilos para el campo de búsqueda */
+.contenedor input[type="text"] {
+      padding: 12px;
+      font-size: 18px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+}
+
+/* Estilos para el botón de búsqueda */
+.contenedor button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #09f;
       color: #ffffff;
       border: none;
+      border-radius: 5px;
       cursor: pointer;
-     }
-     
-     #datosClima {
+      transition: background-color 0.3s ease;
+}
+
+.contenedor button:hover {
+      background-color: #08f;
+}
+
+/* Estilos para la sección de datos de clima */
+#datosClima {
       margin-top: 20px;
-      font-size: 18px;
-     }
+      font-size: 20px;
+      color: #333333;
+}
