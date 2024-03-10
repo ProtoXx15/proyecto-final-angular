@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'calculator-root',
+  selector: 'calculadora-root',
   templateUrl: './calculadora.component.html',
   styleUrls: ['./calculadora.component.css']
 })
