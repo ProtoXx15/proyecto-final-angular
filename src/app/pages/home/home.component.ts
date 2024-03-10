@@ -1,22 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
- selector: 'app-home',
- templateUrl: './home.component.html',
- styleUrls: ['./home.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
- visitCount: number = 0;
- appName: string = 'MiApp';
+  constructor() { }
 
- constructor() { }
+  ngOnInit(): void {
+    this.animateText();
+  }
 
- ngOnInit(): void {
-  // No incrementamos el contador al inicializar el componente
- }
-
- incrementVisitCount() {
-  // Incrementamos el contador de visitas al hacer clic en el botón
-  this.visitCount += 1;
- }
+  animateText() {
+    setTimeout(() => {
+      let nameElement = document.getElementById('name') as HTMLElement;
+      if (nameElement) {
+        nameElement.style.display = 'inline';
+        setTimeout(() => {
+          nameElement.style.color = 'orange'; // naranjita Bootstrap
+          nameElement.style.fontSize = '48px';
+        }, 1000);
+      }
+    }, 2000);
+  }
 }

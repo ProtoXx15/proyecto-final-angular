@@ -15,20 +15,24 @@ export class HeaderComponent {
   constructor(private router: Router) { }
   buscar() {
     switch (this.search.toLowerCase()) {
-      case 'cats':
-        this.router.navigate(['/cats']);
+      case 'dogs':
+        this.router.navigate(['/dogs']);
         break;
       case 'clima':
         this.router.navigate(['/clima']);
         break;
-      case 'gitHub':
+      case 'github':
         this.router.navigate(['/github']);
         break;
       case 'servidor':
         this.router.navigate(['/server']);
         break;
+      case 'camara': // Agregamos este caso para la búsqueda de la cámara
+        this.router.navigate(['/camera']);
+        break;
       default:
         this.router.navigate(['/home']);
     }
   }
+
 }
