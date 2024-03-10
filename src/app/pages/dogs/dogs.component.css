@@ -1,0 +1,16 @@
+.container {
+    max-width: 500px; /* Establece el ancho máximo del contenedor principal */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px; /* Añade un espacio alrededor del contenedor */
+}
+
+.image-container {
+    max-width: 100%; /* Esto asegura que el contenedor de la imagen no exceda el ancho del contenedor principal */
+}
+
+.dog-image {
+    max-width: 100%; /* Esto asegura que la imagen no exceda el ancho del contenedor de la imagen */
+    height: auto; /* Esto permite que la imagen mantenga su proporción original */
+    display: block; /* Asegura que la imagen sea tratada como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente en su contenedor */
+}
