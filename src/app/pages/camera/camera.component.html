@@ -1,8 +1,8 @@
 <div>
-    <button class="camera-button" (click)="openCamera()">Open Camera</button> // Botón para abrir la camara
-    <button class="camera-button" (click)="closeCamera()">Close Camera</button> // Botón para cerrar la camara
+    <button class="camera-button" (click)="openCamera()">Open Camera</button> <!-- Botón para abrir la camara-->
+    <button class="camera-button" (click)="closeCamera()">Close Camera</button> <!--Botón para cerrar la camara -->
 </div>
 
 <div id="cameraContainer" class="camera-container">
-    <video #cameraFeed autoplay playsinline [hidden]="!cameraStream"></video> // Elemento de video para mostrar la camara 
+    <video #cameraFeed autoplay playsinline [hidden]="!cameraStream"></video> <!-- Elemento de video para mostrar la camara -->
 </div>

@@ -1,7 +1,7 @@
-<h1>Adivina el número</h1>
-<p>Introduce un número entre 1 y 100:</p>
-<input type="number" [(ngModel)]="numeroEntrada">
-<button (click)="comprobar()">Comprobar</button>
+<h1>Adivina el número</h1> <!-- Encabezado del juego -->
+<p>Introduce un número entre 1 y 100:</p> <!-- Instrucción para que el usuario introduzca un número -->
+<input type="number" [(ngModel)]="numeroEntrada"> <!-- Campo de entrada numérica -->
+<button (click)="comprobar()">Comprobar</button> <!-- Botón para comprobar el número ingresado -->
 
-<p>{{ mensaje }}</p>
-<h4>Cantidad de intentos: {{ intentos }}</h4>
+<p>{{ mensaje }}</p> <!-- Muestra el mensaje de retroalimentación -->
+<h4>Cantidad de intentos: {{ intentos }}</h4> <!-- Muestra la cantidad de intentos realizados -->
