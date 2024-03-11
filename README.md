@@ -1,27 +1,34 @@
-# Cliente
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+`
+# Proyecto Angular con APIs Externas y complementos, junto a un servidor interno
 
-## Development server
+Guia basica sobre el proyecto final de angular donde se han introducido 3 apis externas, 4 componentes, uno de ello mediante servidor interno.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requisitos
 
-## Code scaffolding
+- Node.js y npm instalados.
+- Angular CLI instalado globalmente (`npm install -g @angular/cli`).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalación
 
-## Build
+1. Clona este repositorio en tu máquina local:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+git clone https://github.com/ProtoXx15/proyecto-final-angular.git
+```
+2. Navega hasta el directorio del proyecto:
+```bash
+cd proyecto-final-angular
+```
+3. Instala las dependencias del proyecto:
+```bash
+npm install
+```
+# Ejecución del Proyecto
+Una vez que las dependencias estén instaladas y las configuraciones estén establecidas, puedes ejecutar el proyecto localmente:
+```bash
+ng s
+```
+Esto iniciará un servidor de desarrollo y podrás acceder a la aplicación a través de tu navegador en http://localhost:4200.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`
