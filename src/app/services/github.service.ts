@@ -4,20 +4,20 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class GithubService {
+export class GithubService { 
   private _http = inject(HttpClient);
   private urlBase = 'https://api.github.com/users';
   buscarUsuario(username: string): Observable<any> {
     return this._http.get(`${this.urlBase}/${username}`);
   }
-  procesarDatosGithub(data: any): any {
+  procesarDatosGithub(data: any): any { // Procesa los datos del usuario de GitHub recibidos del servicio
     return {
-      nombre: data.login,
-      img: data.avatar_url,
-      followers: data.followers,
-      following: data.following,
-      admin: data.site_admin,
-      enlace: data.html_url
+      nombre: data.login, // Nombre del usuario
+      img: data.avatar_url, // URL de la imagen de perfil
+      followers: data.followers, // Número de seguidores
+      following: data.following, // Número de usuarios que sigue
+      admin: data.site_admin, // Es administrador
+      enlace: data.html_url // URL del perfil
     }
   }
   constructor() { }

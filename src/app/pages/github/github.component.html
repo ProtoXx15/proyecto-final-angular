@@ -1,25 +1,25 @@
 <div class="container">
   <div class="mb-3 d-flex gap-3">
-    <input type="text" class="form-control" placeholder="Usuario de GitHub" [(ngModel)]="githubUser">
-    <button type="submit" class="btn btn-primary" (click)="getUser()">
-      <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" class="form-control" placeholder="Usuario de GitHub" [(ngModel)]="githubUser"> <!-- Campo de entrada para ingresar el usuario de GitHub -->
+    <button type="submit" class="btn btn-primary" (click)="getUser()"> <!-- Botón para buscar el usuario en GitHub -->
+      <i class="fa-solid fa-magnifying-glass"></i> <!-- Icono de lupa -->
     </button>
   </div>
-  @if (btnClick) {
+  @if (btnClick) { <!-- Estructura condicional para mostrar los datos del usuario si se ha hecho clic en el botón de búsqueda -->
     <div>
-      <div class="card shadow-sm" style="width: 18rem;">
-        <img [src]="datosGithub.img" alt="Imagen de perfil de GitHub" class="card-img-top img-fluid rounded">
+      <div class="card shadow-sm" style="width: 18rem;"> <!-- Tarjeta para mostrar los datos del usuario -->
+        <img [src]="datosGithub.img" alt="Imagen de perfil de GitHub" class="card-img-top img-fluid rounded"> <!-- Imagen de perfil del usuario -->
         <div class="card-body">
-          <h5 class="card-title">{{ datosGithub.nombre }}</h5>
-          @if (datosGithub.admin) {
-            <p class="card-text"> <!-- Corregido el uso del ngIf -->
-              <span class="badge bg-success">Admin</span>
+          <h5 class="card-title">{{ datosGithub.nombre }}</h5> <!-- Nombre del usuario -->
+          @if (datosGithub.admin) { <!-- Estructura condicional para mostrar si el usuario es administrador -->
+            <p class="card-text">
+              <span class="badge bg-success">Admin</span> <!-- Etiqueta indicando que es administrador -->
             </p>
           }
-          <p class="card-text"><strong>Seguidores:</strong> {{ datosGithub.followers }}</p>
-          <p class="card-text"><strong>Siguiendo:</strong> {{ datosGithub.following }}</p>
+          <p class="card-text"><strong>Seguidores:</strong> {{ datosGithub.followers }}</p> <!-- Número de seguidores del usuario -->
+          <p class="card-text"><strong>Siguiendo:</strong> {{ datosGithub.following }}</p> <!-- Número de usuarios que sigue el usuario -->
           <a [href]="datosGithub.enlace" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Ir a
-          GitHub</a>
+          GitHub</a> <!-- Enlace para visitar el perfil del usuario en GitHub -->
         </div>
       </div>
     </div>

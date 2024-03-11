@@ -1,41 +1,51 @@
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="container">
+    <!-- Logo de la página -->
     <a class="navbar-brand text-center" routerLink='home'> Danielo</a>
+    <!-- Botón para desplegar el menú en dispositivos móviles -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Contenido del menú -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
+        <!-- Menú desplegable de APIs -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="apisDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             APIs
           </a>
           <ul class="dropdown-menu" aria-labelledby="apisDropdown">
+            <!-- Opciones de la API -->
             <li><a class="dropdown-item" routerLink="clima"><i class="fa-solid fa-sun"></i> El tiempo</a></li>
             <li><a class="dropdown-item" routerLink="dogs"><i class="fa-solid fa-dog"></i> Dogs</a></li>
             <li><a class="dropdown-item" routerLink="github"><i class="fa-brands fa-github"></i> GitHub</a></li>
           </ul>
         </li>
+        <!-- Menú desplegable de Recetas -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="recetasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Recetas
           </a>
           <ul class="dropdown-menu" aria-labelledby="recetasDropdown">
+            <!-- Opción para ver Recetas -->
             <li><a class="dropdown-item" routerLink="recetas"><i class="fa-solid fa-utensils"></i> Recetas</a></li>
           </ul>
         </li>
+        <!-- Menú desplegable de Componentes -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="otrosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Componentes
           </a>
           <ul class="dropdown-menu" aria-labelledby="otrosDropdown">
+            <!-- Opciones de componentes adicionales -->
             <li><a class="dropdown-item" routerLink="adivinanza"><i class="fa-solid fa-question"></i> Adivinanza</a></li>
             <li><a class="dropdown-item" routerLink="camera"><i class="fa-solid fa-camera"></i> Camara</a></li>
             <li><a class="dropdown-item" routerLink="reloj"><i class="fa-solid fa-clock"></i> Reloj Mundial</a></li>
           </ul>
         </li>
       </ul>
+      <!-- Barra de búsqueda -->
       <div class="d-flex align-items-center">
         <input class="form-control me-2" type="search" list="search" [(ngModel)]="search" placeholder="Search" aria-label="Search" style="width: 150px;">
         <button class="btn btn-outline-light" (click)="buscar()"><i class="fa-solid fa-search"></i></button>
@@ -43,6 +53,7 @@
     </div>
   </div>
 </nav>
+<!-- Lista de opciones de búsqueda -->
 <datalist id="search">
   <option value="Tiempo"></option>
   <option value="Dogs"></option>

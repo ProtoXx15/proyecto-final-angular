@@ -17,6 +17,8 @@ export class RelojMundialComponent implements OnInit {
     }, 1000);
   }
 
+  // Función para actualizar las horas mundiales
+  
   actualizarHoras() {
     const zonasHorarias = ['UTC', 'America/New_York', 'Europe/London', 'Europe/Madrid', 'Europe/Berlin', 'Asia/Tokyo', 'Asia/Kolkata', 'Australia/Sydney']; // Agrega las zonas horarias deseadas
     this.horasMundiales = zonasHorarias.map(zona => {

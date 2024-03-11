@@ -1,11 +1,11 @@
-<div class="container">
-  <div class="row">
-    @for (horaMundial of horasMundiales; track horaMundial) {
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card mt-3">
-          <div class="card-body text-center reloj">
-            <h5 class="card-title">{{ horaMundial.zona }}</h5>
-            <p class="card-text">{{ horaMundial.hora }}</p>
+<div class="container"> <!-- Contenedor principal -->
+  <div class="row"> <!-- Fila para mostrar las tarjetas de las horas mundiales -->
+    @for (horaMundial of horasMundiales; track horaMundial) { <!-- Iteración sobre la lista de horas mundiales -->
+      <div class="col-sm-6 col-md-4 col-lg-3"> <!-- Columna para cada tarjeta de hora mundial -->
+        <div class="card mt-3"> <!-- Tarjeta de hora mundial -->
+          <div class="card-body text-center reloj"> <!-- Contenido de la tarjeta -->
+            <h5 class="card-title">{{ horaMundial.zona }}</h5> <!-- Título de la tarjeta -->
+            <p class="card-text">{{ horaMundial.hora }}</p> <!-- Texto de la tarjeta mostrando la hora -->
           </div>
         </div>
       </div>
