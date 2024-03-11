@@ -7,26 +7,33 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="clima"><i class="fa-solid fa-sun"></i> El tiempo</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="apisDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            APIs
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="apisDropdown">
+            <li><a class="dropdown-item" routerLink="clima"><i class="fa-solid fa-sun"></i> El tiempo</a></li>
+            <li><a class="dropdown-item" routerLink="dogs"><i class="fa-solid fa-dog"></i> Dogs</a></li>
+            <li><a class="dropdown-item" routerLink="github"><i class="fa-brands fa-github"></i> GitHub</a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="dogs"><i class="fa-solid fa-dog"></i> Dogs</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="recetasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Recetas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="recetasDropdown">
+            <li><a class="dropdown-item" routerLink="recetas"><i class="fa-solid fa-utensils"></i> Recetas</a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="github"><i class="fa-brands fa-github"></i> GitHub</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="recetas"><i class="fa-solid fa-utensils"></i> Recetas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="adivinanza"><i class="fa-solid fa-question"></i> Adivinanza</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="camera"><i class="fa-solid fa-camera"></i> Camara</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="calculadora"><i class="fa-solid fa-calculator"></i> Calculadora</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="otrosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Otros
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="otrosDropdown">
+            <li><a class="dropdown-item" routerLink="adivinanza"><i class="fa-solid fa-question"></i> Adivinanza</a></li>
+            <li><a class="dropdown-item" routerLink="camera"><i class="fa-solid fa-camera"></i> Camara</a></li>
+            <li><a class="dropdown-item" routerLink="calculadora"><i class="fa-solid fa-calculator"></i> Calculadora</a></li>
+          </ul>
         </li>
       </ul>
       <div class="d-flex align-items-center">

@@ -24,15 +24,20 @@ export class HeaderComponent {
       case 'github':
         this.router.navigate(['/github']);
         break;
-      case 'servidor':
-        this.router.navigate(['/server']);
+      case 'recetas':
+        this.router.navigate(['/recetas']);
         break;
-      case 'camara': // Agregamos este caso para la búsqueda de la cámara
+      case 'adivinanza':
+        this.router.navigate(['/adivinanza']);
+        break;
+      case 'camara':
         this.router.navigate(['/camera']);
+        break;
+      case 'calculadora':
+        this.router.navigate(['/calculadora']);
         break;
       default:
         this.router.navigate(['/home']);
     }
   }
-
 }
